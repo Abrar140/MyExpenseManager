@@ -3,7 +3,7 @@
 // import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
 // export function Analytics() {
-//   const { data: expenses } = useQuery({ 
+//   const { data: expenses } = useQuery({
 //     queryKey: ["/api/expenses"]
 //   });
 
@@ -65,17 +65,10 @@
 //   );
 // }
 
-
-
-
-
-
-
-
 import React, { useEffect, useState } from "react";
 import { View, Text, ActivityIndicator, StyleSheet } from "react-native";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firebaseConfig"; // Ensure Firebase is configured
+import { db } from "../../../firebaseConfig"; // Ensure Firebase is configured
 import { BarChart, Grid, XAxis, YAxis } from "react-native-svg-charts";
 import { Card } from "react-native-paper";
 
@@ -103,7 +96,9 @@ export function Analytics() {
   }, []);
 
   if (loading) {
-    return <ActivityIndicator size="large" color="#007bff" style={styles.loader} />;
+    return (
+      <ActivityIndicator size="large" color="#007bff" style={styles.loader} />
+    );
   }
 
   if (expenses.length === 0) {
@@ -221,4 +216,3 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
 });
-
