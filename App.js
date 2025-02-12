@@ -1,12 +1,12 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import { ExpenseForm } from "./Client/src/Components/Expenseform";
+import { ExpenseList } from "./Client/src/Components/ExpenseList";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
-      <ExpenseForm />
+      <ExpenseList />
       <StatusBar style="auto" />
     </View>
   );
