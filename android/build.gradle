@@ -1,0 +1,17 @@
+buildscript {
+    repositories {
+        // ... existing repositories
+        google()  // Make sure this is present
+    }
+    dependencies {
+        // ... other dependencies
+        classpath 'com.google.gms:google-services:4.3.15'  // Add this line if missing
+    }
+}
+
+allprojects {
+    repositories {
+        // ... existing repositories
+        google()  // Make sure this is present
+    }
+} 
