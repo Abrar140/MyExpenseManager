@@ -7,7 +7,7 @@ import {
   StyleSheet,
 } from "react-native";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../../firebaseConfig"; // Ensure Firebase is configured
+import { db } from "../../../firebaseConfig"; // Ensure Firebase is confiured
 import RNHTMLtoPDF from "react-native-html-to-pdf"; // Library for PDF generation
 
 export function ExpenseList() {
